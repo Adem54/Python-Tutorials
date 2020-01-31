@@ -1,0 +1,167 @@
+Bu sorular kodstar bolum sonunu adimlarini tamamlayip, baska  sorularla ugrasmak isteyen arkadaslar icin,
+ kesinlikle oncelikli degil.
+Onceligimiz kodstar bolum sonun adimlarini tam anlayarak tamamlamak.
+
+Bunlar sizin icin alistirma sorulari, cozumlerinizi bize gondermenize gerek yok, lutfen yazdiginiz programlari,
+seri/dizi isimlerini burada paylasmayin.
+Bu cumartesi vakitimiz olursa, bu sorulardan bir kacini cozebiliriz.
+
+
+SORU-1
+=========================================================
+
+Kullanicidan bir tam sayi alip asagidaki kurala gore kullanicidan alinan sayiya karsilik gelen sayi dizisini,
+ while dongusu kullanarak olusturan python programini yaziniz.
+
+Sayi Dizinin kurali:
+
+1- Dizinin ilk terimi kullanicidan alinan sayi olacak, bu sayiyi n degiskenine atadigimizi varsayarsak;
+2- Sonraki terimler icin su 3 sart uygulanacak:
+     a- n 2'ye tam bolunuyorsa, sonraki terim n//2 
+	 b- Eger n 2'ye tam bolunmuyorsa, sonraki terim 3*n + 1 olacak
+	 c- Sayi dizisi n=1 olunca sonlanacak
+
+
+Kullanicinin 3 ve 7 girdigi durumlardaki programin outputu su sekilde olmali
+
+
+Lutfen bir sayi giriniz: 3
+3 10 5 16 8 4 2 1
+
+Lutfen bir sayi giriniz: 7
+7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+
+
+Sayi dizisini alt alta da yazdirabilirsiniz, ancak daha okunakli bir sonuc icin sayilari yan yana yazdirmak isterseniz,
+ print() komutunun asagidaki ozelligini kullanabilirsiniz
+
+1. program
+--------------------- 
+print("a")
+print("b")
+print("c")
+-------------------------
+1.programin Output'u
+a
+b
+c
+
+Ayni print() komutlarindan olusan programi su sekilde yazarsak
+2.program
+--------------------------------
+print("a", end=" ")
+print("b", end=" ")
+print("c", end=" ")
+------------------------------------
+2.programin Outputu
+a b c
+===================================================================================================================
+
+SORU-2
+Ilk 2 terimi 3 ve 4 olan asagidaki kurala gore olusturulacak sayi dizisinin ilk 15 terimini ekrana yazacak python programini while dongusu kullanarak yaziniz.
+
+Dizinin her teriminin kendinden onceki son 2 terimin toplami seklinde olusmasi gerekiyor yani su sekilde;
+
+Dizimizin ilk 2 terimi bize verilmisti zaten 3 ve 4.
+
+3. terimimiz  yukaridaki sarta gore 1. ve 2. terimin toplami olmasi gerekiyor yani 3 + 4 = 7
+3 4 7
+4. terimimizin de 2. ve 3. terimin toplami olmasi gerekiyor; yani 4 + 7 = 11
+3 4 7 11
+5. terimimiz de 3. ve 4. terimin toplami olmali; yani 7 + 11 = 18
+3 4 7 11 18
+6. terimimiz de 4. ve 5. terimin toplami olmali; yani 11 + 18 = 29
+3 4 7 11 18 29
+Seri bu sekilde devam etmeli
+
+
+Ornek program outputu
+Serinin ilk 15 terimi =  3 4 7 11 18 29 47 76 123 199 322 521 843 1364 2207
+
+Serideki sayilari alt alta yazdirmanizda bir problem yok, ancak  daha okunakli olmasi icin sayilari yan yana ayni satirda yazdirmak isterseniz Soru-1'deki print() ozelligini kullanabilirsiniz.
+===================================================================================================================================================================================================
+
+SORU-3
+
+
+Asagidaki desenleri while dongusu kullanarak olusturacak python programlarini yaziniz. Her programda yalnizca 1 tane while dongusu kullanabilirsiniz.
+
+1. Desen
+------------------- 
+*           
+**                       
+***
+****
+*****
+------------------
+
+2. Desen
+------------------
+    *
+   ***
+  *****
+ *******
+*********
+------------------
+
+3. Desen
+------------------
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+------------------
+
+
+SORU-4 SAYI TAHMIN OYUNU
+========================================
+Bu soruda kullanicinin aklindan tutugu 1 ile 100 arasindaki sayi , kullanicidan alacagi komutlarla bulacak bir python programi yazmaniz isteniyor.
+ 
+Program soyle calismali :
+1- Kullanici aklindan 1 ile 100 arasinda bir sayi tutacak
+2- Bilgisayar bir tahminde bulunacak, sonra bilgisayar kullanicidan su sekilde bir  input isteyecek
+	"Tahmin dogruysa 'd' ye , tutulan sayidan yuksekse 'y' ye, tutulan sayidan alcaksa 'a' ya basiniz"
+3- Bilgisayar bir ust soruda aldigi cevaba gore yeni bir tahmin uretecek ve bu dongu bilgisayar sayiyi dogru tahmin edene kadar yani kullanici
+    "Tahmin dogruysa 'd' ye , tutulan sayidan yuksekse 'y' ye, tutulan sayidan alcaksa 'a' ya basiniz" bu input komutuna 'd' girene, yani tahmin dogru diyene kadar  devam edecek.
+
+4- Programi yazarken kullinicinin her zaman 'd' 'y' ve 'a' dan birini ve dogru sekilde girdigini varsayabilirsiniz.
+	
+
+ALGORITMA TAVSIYESI
+
+Bu program icin soyle bir algoritma kullanabilirsiniz.
+
+Diyelim ki kullanici aklinda 56 sayisini tuttu.
+
+1. Tahmin: Bilgisayarin ilk tahmini her zaman 50 olmali 0 ve 100 un yarisi, tahmin 50 oldugunda, kullanici input olarak 'a' girecek cunku 50 tutulan sayidan(56) alcak.
+2. Tahmin: 50 tutulan sayidan alcak olduguna gore, tutulan sayi 50 ile 100 arasinda olmali, bu durumda bilgisayarin 2. tahmini 75 olacak yani 50 ile 100'un yarisi
+3. Tahmin: 75 tahmini icin kullanici input olarak 'y' girecek cunku 75 tutulan sayi(56)dan yuksek, bu durumda bilgisayarin 3. tahmini 62 olacak yani 50 ile 75 in yarisi(int division)
+4. Tahmin: 62 tahmini icin kullanici  input olarak 'y' girecek cunku 62 tutulan sayi(56)dan yuksek, bu durumda bilgisayarin 3. tahmini 56 olacak yani 50 ile 62'nin yarisi
+
+Bilgisayar 4. tahminde aklimizda tutugumuz sayiyi bulmus oldu . 56 tahmini icin kullanici input olarak 'd' girecek ve program sonlanacak
+
+Kullanicinin aklindan 56 tutugu durumdaki ornek  program outputu
+-----------------------------------------------------------------------------
+Lutfen aklinizdan 1 ile 100 arasinda bir sayi tutunuz
+Tutugunuz sayi  50 mi/mu?
+Tahmin dogruysa 'd' ye , tutulan sayidan yuksekse 'y' ye, tutulan sayidan alcaksa 'a' ya  basiniz : a
+Tutugunuz sayi  75 mi/mu?
+Tahmin dogruysa 'd' ye , tutulan sayidan yuksekse 'y' ye, tutulan sayidan alcaksa 'a' ya  basiniz : y
+Tutugunuz sayi  62 mi/mu?
+Tahmin dogruysa 'd' ye , tutulan sayidan yuksekse 'y' ye, tutulan sayidan alcaksa 'a' ya  basiniz : y
+Tutugunuz sayi  56 mi/mu?
+Tahmin dogruysa 'd' ye , tutulan sayidan yuksekse 'y' ye, tutulan sayidan alcaksa 'a' ya  basiniz : d
+Bildim!!! Tutugunuz sayi :  56
+
+------------------------------------------------------------------------------
+
+=============================================================================================
+
+
+
+

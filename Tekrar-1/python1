@@ -1,0 +1,37 @@
+"""
+Program Gereksinimleri
+
+İnternetten saat satışı yapmayı planlayan bir arkadaşımız, ne kadar sermaye ile nasıl bir kazanç elde edebileceğini
+hesaplamak istiyor. Bunu yapabilmek için hesap makinası kullanmak yerine bizden bir Python programı yazmamızı istiyor.
+
+Program; şu bilgileri kullanıcıdan alacak
+
+Başlangıç sermayesini
+Kaç adet saat satın alacağını
+Ortalama saat maliyetini
+1 saat satışı başına kar oranını
+Bütün saatlerin satılması durumunda, toplamda elinde ne kadar para olacağını hesaplayıp kullanıcıya gösterecek.
+
+Arkadaşımızın istediği hesaplamayı yapan ve sonucu ekrana yazdıran kodu yazın. Kodu yazarken, yorum haline
+getirdiğimiz değişken isimlerini kullanın.
+
+Program testi
+
+Kodu yazdıktan sonra çalıştırıp, 1000 TL sermaye, 5 adet saat, 120 TL ortalama saat maliyeti ve %20 kar değerleri
+ ile kodu test edin. Kodu doğru yazdıysanız, satışlar sonunda eldeki para 1120TL olmalı.
+"""
+
+
+def kar_hesabi(baslangic_sermayesi, satin_alinacak_saat_sayisi, ort_saat_maliyeti, bir_saat_basi_kar_orani):
+    baslangic_sermayesi = int(input("Başlangıç sermayesi giriniz"))
+    satin_alinacak_saat_sayisi = int(input("Satın alınacak saat sayısını giriniz"))
+    ort_saat_maliyeti = int(input("Ortalama saat maliyetini giriniz"))
+    bir_saat_basi_kar_orani = int(input("Bir saat başına kar oranının giriniz % kaçtır ona göre giriniz"))
+    saat_basi_kar_miktari = (ort_saat_maliyeti * bir_saat_basi_kar_orani) / 100
+    toplam_kar = saat_basi_kar_miktari * satin_alinacak_saat_sayisi
+    toplam_eldeki_para = baslangic_sermayesi + toplam_kar
+    return toplam_eldeki_para
+
+
+eldeki_para = kar_hesabi(1000, 5, 120, 20)
+print(eldeki_para)
